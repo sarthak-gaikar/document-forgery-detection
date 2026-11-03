@@ -1,4 +1,4 @@
-﻿# Python
+# Python
 __pycache__/
 *.py[cod]
 *.pyo
@@ -16,10 +16,18 @@ env/
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# Data (large; store separately)
-data/
-outputs/checkpoints/
+# Root Dataset Directory (large raw files downloaded separately)
+/data/
+
+# Temporary Outputs & Logs
 outputs/logs/
+outputs/gradio_temp/
+outputs/temp_demo/
+outputs/.matplotlib/
+outputs/checkpoints/**/*full_optim.pth
+outputs/checkpoints/**/last_model.pth
+outputs/checkpoints/dual_branch_forgery_net/
+outputs/checkpoints/unet_resnet34/
 
 # IDE
 .vscode/
@@ -36,16 +44,23 @@ desktop.ini
 .env
 *.env.*
 
-# Model weights (commit configs only, not binary weights)
+# Model weights: ignore generic binary weights, allow the 4 benchmark models
 *.pth
 *.pt
 *.ckpt
 *.h5
 *.onnx
 
+# Allow the 4 trained best model checkpoints
+!outputs/checkpoints/realtext_finetune/unet_resnet34/best_model.pth
+!outputs/checkpoints/realtext/unet_resnet34/best_model.pth
+!outputs/checkpoints/realtext/dual_branch_forgery_net/best_model.pth
+!outputs/checkpoints/realtext/deeplabv3plus_efficientnetb3/best_model.pth
+
 # TensorBoard
 runs/
 
-# Coverage
+# Coverage & Tests
 .coverage
 htmlcov/
+.pytest_cache/
