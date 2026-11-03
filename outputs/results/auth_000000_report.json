@@ -1,0 +1,7 @@
+{
+  "input_path": "data\\synthetic\\auth_000000.png",
+  "is_forged": false,
+  "confidence": 0.0018287879647687078,
+  "regions_count": 0,
+  "forgery_regions": []
+}

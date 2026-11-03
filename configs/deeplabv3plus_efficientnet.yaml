@@ -4,7 +4,7 @@ model:
   type: segmentation
   arch: deeplabv3plus
   encoder: efficientnet-b3
-  encoder_weights: imagenet
+  encoder_weights: null
   in_channels: 3
   classes: 1
 

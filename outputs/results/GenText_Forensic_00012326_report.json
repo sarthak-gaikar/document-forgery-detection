@@ -1,0 +1,19 @@
+{
+  "input_path": "data\\realtext_v2\\train\\image\\part008\\GenText_Forensic_00012326.jpg",
+  "is_forged": true,
+  "confidence": 0.99956876039505,
+  "regions_count": 1,
+  "forgery_regions": [
+    {
+      "bbox": [
+        129,
+        745,
+        221,
+        775
+      ],
+      "area": 2456,
+      "mean_score": 0.9094621539115906,
+      "max_score": 0.99956876039505
+    }
+  ]
+}

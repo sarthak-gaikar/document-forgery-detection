@@ -1,0 +1,19 @@
+{
+  "input_path": "data\\synthetic\\forged_000000.png",
+  "is_forged": true,
+  "confidence": 0.9923964142799377,
+  "regions_count": 1,
+  "forgery_regions": [
+    {
+      "bbox": [
+        536,
+        920,
+        726,
+        950
+      ],
+      "area": 4678,
+      "mean_score": 0.6141902804374695,
+      "max_score": 0.74549400806427
+    }
+  ]
+}

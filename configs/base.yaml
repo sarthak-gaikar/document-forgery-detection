@@ -22,7 +22,7 @@ paths:
 data:
   image_size: 512
   tile_overlap: 64
-  num_workers: 4
+  num_workers: 0
   pin_memory: true
   augment: true
   jpeg_q_min: 50
@@ -30,7 +30,7 @@ data:
 
 training:
   device: auto
-  batch_size: 16
+  batch_size: 8
   epochs: 60
   seed: 42
   lr: 1.0e-4

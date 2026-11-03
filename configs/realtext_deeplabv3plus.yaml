@@ -1,0 +1,31 @@
+# configs/realtext_deeplabv3plus.yaml - Algorithm 3: DeepLabV3+ with EfficientNet-B3 (Model B)
+defaults:
+  - base
+
+paths:
+  data_root: data/realtext_v2/
+  checkpoint_dir: outputs/checkpoints/realtext/
+
+model:
+  name: deeplabv3plus_efficientnetb3
+  type: segmentation
+  arch: deeplabv3plus
+  encoder: efficientnet-b3
+  encoder_weights: null
+  in_channels: 3
+  classes: 1
+
+loss:
+  seg_loss: focal_dice
+  focal_gamma: 2.0
+  dice_smooth: 1.0
+
+training:
+  batch_size: 8
+  lr: 6.0e-5
+  epochs: 30
+  scheduler: cosine
+  warmup_epochs: 3
+  early_stopping_patience: 8
+  amp: true
+

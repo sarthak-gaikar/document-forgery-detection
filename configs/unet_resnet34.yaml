@@ -7,11 +7,11 @@ model:
   type: segmentation
   arch: unet
   encoder: resnet34
-  encoder_weights: imagenet
+  encoder_weights: null
   in_channels: 3
   classes: 1
 
 training:
-  batch_size: 16
+  batch_size: 8
   lr: 1.0e-4
   epochs: 60

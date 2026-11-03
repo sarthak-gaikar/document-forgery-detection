@@ -1,0 +1,29 @@
+# configs/realtext_dual_branch.yaml - Algorithm 1: Dual-Branch Network (RGB + SRM Noise Residuals)
+defaults:
+  - base
+
+paths:
+  data_root: data/realtext_v2/
+  checkpoint_dir: outputs/checkpoints/realtext/
+
+model:
+  name: dual_branch_forgery_net
+  type: multitask
+  rgb_encoder: resnet34
+  rgb_encoder_weights: null
+  freq_channels: 30
+  srm_channels: 3
+  fusion: gated_multiscale
+  decoder: unetplusplus
+  classes: 1
+
+training:
+  batch_size: 8
+  lr: 8.0e-5
+  epochs: 30
+  alpha_cls: 0.5
+  scheduler: cosine
+  warmup_epochs: 3
+  early_stopping_patience: 8
+  amp: true
+

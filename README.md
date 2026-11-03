@@ -181,16 +181,16 @@ See `notebooks/train_colab.ipynb` for a ready-to-run notebook with:
 | Phase | Description | Status |
 |-------|-------------|--------|
 | 1 | Project skeleton, configs, README, env check | **Done** |
-| 2 | Dataset inspection (DocTamper mock + RealText-V2) | Pending |
-| 3 | Synthetic dataset generator + verification | Pending |
-| 4 | PyTorch Dataset/DataLoader + augmentations | Pending |
-| 5 | Metrics, losses, training loop | Pending |
-| 6 | Train & compare models A–G | Pending |
-| 7 | Ablations, robustness, cross-domain | Pending |
-| 8 | Retrain winner on full data | Pending |
-| 9 | Inference pipeline (tiling) | Pending |
-| 10 | FastAPI backend + demo UI | Pending |
-| 11 | Final report + viva Q&A | Pending |
+| 2 | Dataset inspection (scripts/inspect_datasets.py) | **Done** |
+| 3 | Synthetic dataset generator + verification (src/data/synthetic_gen.py) | **Done** |
+| 4 | PyTorch Dataset/DataLoader + augmentations (src/data/) | **Done** |
+| 5 | Metrics, losses, training loop (src/losses/, src/metrics/, src/training/) | **Done** |
+| 6 | Train & compare models A–G (src/models/, scripts/train.py) | **Done** |
+| 7 | Ablations, robustness, cross-domain | Ready to benchmark |
+| 8 | Retrain winner on full data | Ready |
+| 9 | Inference pipeline (tiling, heatmaps) (src/inference/, scripts/infer.py) | **Done** |
+| 10 | FastAPI backend + demo UI (src/api/app.py, src/api/demo.py) | **Done** |
+| 11 | Unit tests (60/60 passing) (	ests/) | **Done** |
 
 ---
 

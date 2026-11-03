@@ -1,0 +1,26 @@
+# configs/realtext_unet.yaml - Algorithm 2: U-Net with ResNet-34 Encoder (Model A Baseline)
+defaults:
+  - base
+
+paths:
+  data_root: data/realtext_v2/
+  checkpoint_dir: outputs/checkpoints/realtext/
+
+model:
+  name: unet_resnet34
+  type: segmentation
+  arch: unet
+  encoder: resnet34
+  encoder_weights: null
+  in_channels: 3
+  classes: 1
+
+training:
+  batch_size: 8
+  lr: 1.0e-4
+  epochs: 30
+  scheduler: cosine
+  warmup_epochs: 3
+  early_stopping_patience: 8
+  amp: true
+
